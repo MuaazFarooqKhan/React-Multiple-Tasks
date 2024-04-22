@@ -8,6 +8,7 @@ function Counter() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+  // this is the function to add 
   const increment = () => {
     if (count < 40) {
       setError('');
@@ -17,6 +18,7 @@ function Counter() {
     }
   };
 
+  // function for decrement
   const decrement = () => {
     if (count > 0) {
       setCount(count - 1);
@@ -26,6 +28,7 @@ function Counter() {
     }
   };
 
+  // simple UI in which I just added 2 buttons
   return (
     <div className="counter-container">
       <Typography variant="h4" className="counter-title">Counter App</Typography>

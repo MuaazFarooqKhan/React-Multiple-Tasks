@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 import '../../styling/weather.css'; 
 
 function Temperature({ temp }) {
+  // initializing the state
   const [unit, setUnit] = useState('celsius');
   const [temperature, setTemperature] = useState(temp);
 
+  // it will call when temp changes
   useEffect(() => {
     setTemperature(temp);
     setUnit('celsius');
   }, [temp]);
 
+  // conversion function
   const handleToggleUnit = () => {
     setUnit(unit === 'celsius' ? 'fahrenheit' : 'celsius');
     if (unit === 'celsius') {
@@ -18,6 +21,8 @@ function Temperature({ temp }) {
       setTemperature((temperature - 32) * 5/9);
     }
   };
+
+  // simple button to change the unit
 
   return (
     <div className="temperature-converter-container">

@@ -5,6 +5,7 @@ import Temperature from './temperature';
 function Display({ weatherData }) {
   const { name, main, weather, wind } = weatherData;
 
+  // just to make it responsive and beautiful and add the conversion component
   return (
     <div className="weather-display-container">
       <h2 className="weather-display-title">Current Weather</h2>
